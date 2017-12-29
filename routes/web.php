@@ -13,8 +13,20 @@
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
-Route::get('/just-test', function () {
+Route::get('about', function () {
+    return view('pages.about');
+})->name('about');
+
+Route::get('products', function () {
+    return view('pages.products');
+})->name('products');
+
+Route::get('services', function () {
+    return view('pages.services');
+})->name('services');
+
+$router->get('/just-test', function () {
    return "<h1>Just test closure returning statement</h1>";
-});
+})->name('just test');

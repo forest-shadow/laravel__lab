@@ -1,7 +1,7 @@
 <div class="links">
-    <a href="https://laravel.com/docs">Documentation</a>
-    <a href="https://laracasts.com">Laracasts</a>
-    <a href="https://laravel-news.com">News</a>
-    <a href="https://forge.laravel.com">Forge</a>
-    <a href="https://github.com/laravel/laravel">GitHub</a>
+    <a href="{{ route('home') }}">Home</a>
+    <a href="{{ route('services') }}">Services</a>
+    <a href="{{ route('products') }}">Products</a>
+    <a href="{{ route('about') }}">About</a>
+    <a href="{{ route('just test') }}">Route Closure Test</a>
 </div>
