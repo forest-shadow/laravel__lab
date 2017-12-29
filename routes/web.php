@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('/just-test', function () {
+   return "<h1>Just test closure returning statement</h1>";
+});
