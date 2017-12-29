@@ -23,9 +23,7 @@ Route::get('products', function () {
     return view('pages.products');
 })->name('products');
 
-Route::get('services', function () {
-    return view('pages.services');
-})->name('services');
+Route::get('services', 'ServicesController@index')->name('services');
 
 $router->get('/just-test', function () {
    return "<h1>Just test closure returning statement</h1>";

@@ -8386,12 +8386,9 @@ body {
   top: 18px;
 }
 
-.content {
-  text-align: center;
-}
-
 .title {
   font-size: 84px;
+  text-align: center;
 }
 
 .links > a {
@@ -8406,5 +8403,11 @@ body {
 
 .m-b-md {
   margin-bottom: 30px;
+}
+
+section.services {
+  margin-top: 40px;
+  font-size: 18px;
+  font-weight: 500;
 }
 
