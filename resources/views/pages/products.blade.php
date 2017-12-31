@@ -1,5 +1,6 @@
 @extends('layout.site-layout')
 
+@section('content')
 <div class="flex-center position-ref full-height">
     @include('layout.top-nav')
 
@@ -11,3 +12,4 @@
         @include('modules.links')
     </div>
 </div>
+@endsection

@@ -15,15 +15,23 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('about', function () {
+Route::get('/about', function () {
     return view('pages.about');
 })->name('about');
 
-Route::get('products', function () {
+Route::get('/products', function () {
     return view('pages.products');
 })->name('products');
 
-Route::get('services', 'ServicesController@index')->name('services');
+Route::get('/services', [
+    'as'    => 'services',
+    'uses'  => 'ServicesController@index'
+]);
+
+Route::get('/service/{service}', [
+    'as'    => 'service.show',
+    'uses'  => 'ServiceController@show'
+]);
 
 $router->get('/just-test', function () {
    return "<h1>Just test closure returning statement</h1>";

@@ -6,10 +6,15 @@
 
     <div class="content">
         <div class="title m-b-md">
-            About Page
+            {{ $service->name }}
         </div>
 
         @include('modules.links')
+
+        <article class="service">
+            <h2>{{ $service->name }}</h2>
+            {{ $service->desc }}
+        </article>
     </div>
 </div>
 @endsection
