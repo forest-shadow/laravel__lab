@@ -34,5 +34,6 @@ Route::get('/service/{service}', [
 ]);
 
 $router->get('/just-test', function () {
-   return "<h1>Just test closure returning statement</h1>";
+    echo Config::get('services.mailgun.secret');
+    return "<h1>Just test closure returning statement</h1>";
 })->name('just test');
