@@ -1,7 +1,7 @@
 @extends('layout.site-layout')
 
 @section('content')
-<div class="flex-center position-ref full-height">
+<div class="flex-center position-ref">
     @include('layout.top-nav')
 
     <div class="content">
