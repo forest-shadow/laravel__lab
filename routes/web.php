@@ -37,3 +37,19 @@ $router->get('/just-test', function () {
     echo Config::get('services.mailgun.secret');
     return "<h1>Just test closure returning statement</h1>";
 })->name('just test');
+
+Route::get('/users/{id}/posts/{postId}', function($id, $postId) {
+    echo $id . ' ' . $postId;
+});
+
+Route::get('/users/{id?}', function($id = null) {
+    return $id;
+});
+
+Route::get('/landing/page', function() {
+    return "landing page";
+})->name('landing');
+
+Route::get('/redirect', function() {
+   return redirect()->route('landing');
+});
