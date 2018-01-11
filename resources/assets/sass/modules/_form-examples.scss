@@ -1,0 +1,11 @@
+section.form-examples {
+  margin: 40px 0;
+
+  form {
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -33,6 +33,30 @@ Route::get('/service/{service}', [
     'uses'  => 'ServiceController@show'
 ]);
 
+Route::get('/form-examples', function() {
+    return view('pages.form-examples');
+})->name('form examples');
+
+
+Route::group(['prefix' => 'forms'], function () {
+
+    Route::post('simple-form', [
+        'as' => 'forms.simple-form',
+        'uses' => 'FormsController@simpleForm'
+    ]);
+
+    Route::post('array-form', [
+        'as' => 'forms.array-form',
+        'uses' => 'FormsController@arrayForm'
+    ]);
+
+    Route::post('picture-upload', [
+        'as' => 'forms.picture-upload',
+        'uses' => 'FormsController@uploadPictureForm'
+    ]);
+});
+
+
 $router->get('/just-test', function () {
     echo Config::get('services.mailgun.secret');
     return "<h1>Just test closure returning statement</h1>";
