@@ -13,7 +13,7 @@
 
         <section class="services">
             @if(count($services))
-                <p>Current Services count: {{count($services)}}</p>
+                <p>Current Services count: {{ $servicesTotalCount }}</p>
             @endif
 
             @foreach($services as $service)
@@ -23,6 +23,8 @@
                     <a href="{{ route( 'service.show', $service->slug ) }}">Read more</a>
                 </article>
             @endforeach
+
+            {{ $services->links() }}
         </section>
     </div>
 </div>

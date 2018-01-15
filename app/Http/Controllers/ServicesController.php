@@ -9,7 +9,12 @@ class ServicesController extends Controller
 {
     public function index()
     {
-        $services = Service::all();
-        return view('pages.services')->with('services', $services);
+        $services = Service::paginate(4);
+        $servicesTotalCount = count(Service::all());
+
+        return view('pages.services')->with([
+            'services' => $services,
+            'servicesTotalCount' => $servicesTotalCount
+        ]);
     }
 }
