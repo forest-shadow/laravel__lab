@@ -25,7 +25,7 @@ Route::get('/products', function () {
 
 Route::get('/services', [
     'as'    => 'services',
-    'uses'  => 'ServicesController@index'
+    'uses'  => 'ServiceController@index'
 ]);
 
 Route::get('/service/{service}', [
