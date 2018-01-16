@@ -19,9 +19,15 @@ Route::get('/about', function () {
     return view('pages.about');
 })->name('about');
 
-Route::get('/products', function () {
-    return view('pages.products');
-})->name('products');
+Route::get('/products', [
+    'as'    => 'products',
+    'uses'  => 'ProductController@index'
+]);
+
+Route::get('/products/{product}', [
+    'as'    => 'product.show',
+    'uses'  => 'ProductController@show'
+]);
 
 Route::get('/services', [
     'as'    => 'services',
