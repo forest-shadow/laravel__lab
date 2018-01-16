@@ -12,7 +12,7 @@ class ServiceController extends Controller
         $services = Service::paginate(4);
         $servicesTotalCount = count(Service::all());
 
-        return view('pages.services')->with([
+        return view('service.services')->with([
             'services' => $services,
             'servicesTotalCount' => $servicesTotalCount
         ]);

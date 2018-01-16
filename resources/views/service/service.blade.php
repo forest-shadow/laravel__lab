@@ -14,6 +14,7 @@
         <article class="service">
             <h2>{{ $service->name }}</h2>
             {{ $service->desc }}
+            <a href="{{ URL::previous() }}">Back</a>
         </article>
     </div>
 </div>
