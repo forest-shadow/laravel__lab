@@ -14,6 +14,13 @@
                 <form method="post" action="{{ route('forms.simple-form') }}?utm=12345">
                     {{ csrf_field() }}
                     <input type="text" name="firstName">
+                    @if ($errors->has('firstName'))
+                        <ul class="errors">
+                            @foreach ($errors->get('firstName') as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    @endif
                     <input type="submit">
                 </form>
 

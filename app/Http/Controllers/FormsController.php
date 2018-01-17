@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 class FormsController extends Controller
 {
     public function simpleForm(Request $request) {
+
+        $this->validate($request, [
+            'firstName' => 'required|min:3'
+        ]);
+
         var_dump($request->all());
         var_dump($request->except('_token'));
         var_dump($request->only(['firstName', 'utm']));
