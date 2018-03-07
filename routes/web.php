@@ -83,3 +83,7 @@ Route::get('/landing/page', function() {
 Route::get('/redirect', function() {
    return redirect()->route('landing');
 });
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
